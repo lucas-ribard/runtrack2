@@ -8,4 +8,11 @@
     $val = 6;
     echo "$val<br/>";
     echo $val+4;
+    echo "<br/>";
+
+    $myBool = true;
+    echo "$myBool<br/>";
+
+    $myBool = false;
+    echo "$myBool<br/>";
 ?>
