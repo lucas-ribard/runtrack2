@@ -2,9 +2,6 @@
 //le tableau
 $tableau = array (200, 204, 173, 98, 171, 404, 459);
 
-//compte nombre d'éléments dans le tableau
-//deja le faire marcher et ensuite compliquer en enlevant les fonctions systemes            
-
 /*
 
 boucle qui vérifie que la valeure n'est pas null fonction isset autorisé
@@ -26,7 +23,8 @@ for ($x = 1; $i <= 100; $x++) {
     }
 }
 /*
-
+//compte nombre d'éléments dans le tableau
+//deja le faire marcher et ensuite compliquer en enlevant les fonctions systemes    
 $nbpos=count($tableau);
 
 //prend chaque chiffre jusqu'au nombre d'élément dans la liste
