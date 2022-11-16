@@ -7,8 +7,6 @@ for ($i = 1; $i <= 100; $i++) {
         echo "Fizz<br>";
     }
     
-    
-
      //si le nombre est divisble par 5  mais pas par 3
     elseif ($i % 5 == 0 xor $i % 3 == 0){
 
