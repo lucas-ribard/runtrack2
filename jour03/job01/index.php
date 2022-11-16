@@ -3,7 +3,30 @@
 $tableau = array (200, 204, 173, 98, 171, 404, 459);
 
 //compte nombre d'éléments dans le tableau
-//deja le faire marcher et ensuite compliquer en enlevant les fonctions systemes                                                                                                                                                                                                            on s'embete pour rien encore
+//deja le faire marcher et ensuite compliquer en enlevant les fonctions systemes            
+
+/*
+
+boucle qui vérifie que la valeure n'est pas null fonction isset autorisé
+tant que valeur pas null compteur +1
+
+*/
+for ($x = 1; $i <= 100; $x++) {
+    $nomb = $tableau[$x-1];
+    if (isset($nomb)){
+        if ($nomb % 2 == 0){
+            echo "$nomb est paire<br>";
+        }
+        else {
+            echo "$nomb est impaire<br>";
+        }
+    }
+    else{
+        break;
+    }
+}
+/*
+
 $nbpos=count($tableau);
 
 //prend chaque chiffre jusqu'au nombre d'élément dans la liste
@@ -16,5 +39,5 @@ for ($i = 0; $i <= $nbpos-1; $i++) {
     else {
         echo "$nombre est impaire<br>";
     }
-}
+}*/
 ?>
