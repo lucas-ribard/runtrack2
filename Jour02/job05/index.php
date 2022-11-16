@@ -20,7 +20,7 @@ for ($i = 2; $i <= 1000; $i++) {
 }
 //si le nombre est premier on l'écrit
 if ($premier==true){
-    echo "$i est premier <br>";
+    echo "$i<br>";
 }
 }
 ?>
