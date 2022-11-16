@@ -2,8 +2,9 @@
 //le tableau
 $tableau = array (200, 204, 173, 98, 171, 404, 459);
 
-//deja le faire marcher et ensuite compliquer en enlevant les fonctions systemes
+//deja le faire marcher et ensuite compliquer en enlevant les fonctions systemes                                                                                                                                                                                                            on s'embete pour rien encore
 $nbpos=count($tableau);
+
 //prend chaque chiffre jusqu'au nombre d'élément dans la liste
 for ($i = 0; $i <= $nbpos-1; $i++) {
  
