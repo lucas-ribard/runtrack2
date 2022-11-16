@@ -8,8 +8,8 @@ for ($i = 0; $i <= 100; $i++) {
     //un chiffre sur deux est impaire
     //donc chaque nombre paire fera une lettre sur deux
     if($i % 2 ==0){
-        $nombre = $str[$i];
-        echo $nombre;
+        $lettre = $str[$i];
+        echo $lettre;
     }
 }
 
