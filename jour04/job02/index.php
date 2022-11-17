@@ -21,7 +21,6 @@
 </form>
 
 
-
 <style>
     table{
         padding:2%;
@@ -37,8 +36,6 @@
     }   
 
 </style>
-
-
 
     <br>
     <table >
