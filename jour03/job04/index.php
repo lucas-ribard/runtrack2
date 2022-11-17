@@ -5,19 +5,24 @@ echo "$str<br>";
 $nbchar=0;
 
 //boucle
-for ($i = 1; $i <= 100; $i++) {
+for ($i = 0; $i <= 100; $i++) {
     //recup la lettre
     $lettre = $str[$i];
-    //si la lettre existe
-    if (isset($lettre)){
-        //on ajoute 1 au compteur
-        $nbchar++;
-    }
-    //si elle est null on met fin a la boucle
-    else{
+    
+    //test si la lettre existe
+    //originalement avec isset mais les resultat il considere des espace vide comme des charactere
+    //liste completes du comportement de isset() et empty():
+    //https://21douze.fr/isset-ou-pas-isset-jeudiconfession-php-n2-7140.html
+    if (empty($lettre)){
+       
         break;
+        
+    }
+    else{
+         //on ajoute 1 au compteur
+         $nbchar++;
     }
 }
-//la bonne réponse est 44
-echo "Il y a $nbchar charactères dans cette phrase";
+//pour debug : la bonne réponse est 44
+echo "<br>Il y a $nbchar charactères dans cette phrase";
 ?>
