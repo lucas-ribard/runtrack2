@@ -43,16 +43,16 @@
         <tr><th>Arguments</th><th>Valeurs</th></tr> 
     </thead>
         <?php
-            $count=0;
+            // pour chaque GET en argument
             foreach ($_GET as $args => $value) {
-                $len=0;
+                $len=0; 
                 for ($i = 0; (isset($value[$i])); $i++) {
-                $len++; // Compte le nombre d'arguments et de valeurs
+                $len++; 
                 }
-                if ($len > 0) { // si la valeur est supérieure à 0
-                    echo "<tr>"; 
-                    echo "<td>$args</td>"; // Affiche les arguments
-                    echo "<td>$value</td>"; // Affiche les valeurs
+                if ($len > 0) { // si valeur est plus grande que 0
+                    echo "<tr>"; //nouvelle ligne de tableau
+                    echo "<td>$args</td>"; //arguments dans une colonne
+                    echo "<td>$value</td>"; //valeur dans une colonne
                     echo "</tr>";
 
                 }
