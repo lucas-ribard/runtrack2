@@ -13,15 +13,17 @@
 
 <?php
 
-$username = $_POST["username"];
-$password = $_POST["password"];
+    if(isset($_POST["username"])and isset($_POST["password"])){
+        if ($_POST["username"]==="John" and $_POST["password"]==="Rambo"){
+            echo "C'est pas ma guerre";
+        }
+        else {
+            echo "Votre pire cauchemar";
+        }
 
-
-if(empty($_POST["username"])and empty($_POST["password"])){
-    if ($username==="John" and $password==="Rambo"){
-        echo "C'est pas ma guerre";
+    }
+    else {
+        echo "";
     }
 
-}
-echo "Votre pire cauchemar";
 ?>
