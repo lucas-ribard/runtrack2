@@ -43,10 +43,20 @@
         boucle $i
         alphabet[$i]
         lettre = alphabet[$i+$déclage]
+            if $i > 26 {
+                $i = $i-26
+            }
         */
     }
     function plateforme($str){
         //si finit par me ajoute "_"
+        /*
+        if (m){
+            if(e){
+                echo "_"
+            }
+        }
+        */
     }
 
     //code
