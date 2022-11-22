@@ -14,29 +14,41 @@
 
 <?php
 
-function space()
-	{
-        //faire une fonction pour espace * nombre d'espace a mettre
-		echo "Exemple de fonction.\n";
-	}
-
-
-
+$space="&nbsp;&nbsp;";
 
 $hauteur=$_GET["hauteur"];
 $largeur=$_GET["largeur"];
+
+echo "$hauteur $largeur <br>";
+
 //triangle
-echo (""*$hauteur),"/\ <br>";
-//                          -1 pour compenser la pointe d'au dessus
-//                         V
-for ($i = 0; $i<=($hauteur-1); $i++){
-    $espace = $hauteur-$i;
-    echo "/",(""*$espace),"\ <br>";
+//espace avant pointe
+if (isset($hauteur)){
+    for ($tempespace = $largeur; $tempespace > 0; $tempespace--){
+        echo "$space";
+    }
+    echo "/\ <br>";
+
+    //                    -1 pour compenser la pointe d'au dessus
+    //                   V
+    //taille du toit
+    $tespa=0;
+    for ($temp = $hauteur-1; $temp > 0; $temp--, $tespa++){
+        //espace avant "   "/   \
+        for ($tempespace = $largeur-1; $tempespace > $tespa; $tempespace--){
+            echo "$space";
+        }
+
+        echo "/";
+        //espace apres     /"    "\
+        for ($tempespace = $largeur-2; $tempespace > $tespa; $tempespace--){
+            echo "$space";
+    }
+        echo "\ <br>";
+    }
 }
 //carré
-for ($i = 0; i<=$hauteur; $i++){
-    
-}
+//for ($i = 0; i<=$hauteur; $i++){}
 
 
 
