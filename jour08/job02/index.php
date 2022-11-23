@@ -10,16 +10,15 @@
     
     } 
     //si jamais visité
-    if (!isset($_COOKIE['nbvisit']))
-    {
-        $cookie = 1;
-        setcookie("nbvisit", $cookie);
+    if (!isset($_COOKIE['nbvisit'])){
+        $compteur = 1;
+        setcookie("nbvisit", $compteur);
     }
     //compteur
     else{
         //cookie est = a "nbvisit"+1
-        $cookie = ++$_COOKIE['nbvisit'];
-        setcookie("nbvisit", $cookie);
+        $compteur = ++$_COOKIE['nbvisit'];
+        setcookie("nbvisit", $compteur);
         
     echo "il y a eu ",$_COOKIE['nbvisit']," visites";
     }
