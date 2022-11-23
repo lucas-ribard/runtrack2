@@ -18,7 +18,6 @@ array_push($_SESSION['lstprenom'],$_POST['prenom']);
 if (isset ($_POST['reset'])){
     $_SESSION['lstprenom']=array();
 }
-
 foreach ($_SESSION['lstprenom'] as  $value) {
     echo "&ensp;&bull;$value<br>";
 }
