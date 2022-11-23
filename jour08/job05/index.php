@@ -1,84 +1,52 @@
-<!DOCTYPE html>
-<html lang="fr">
-<meta charset="utf-8">
-<html>
-<head>
-    <title>MORPION</title>
-    <link href="index.css" rel="stylesheet" type="text/css"/>
-</head>
-
-<header>
-<h1> Morpion </h1>
-</header>
-
 <?php
+    function affichage($Ligne1,$Ligne2,$Ligne3){
+        echo $Ligne1[0],"&ensp;|&ensp;",$Ligne1[1],"&ensp;|&ensp;",$Ligne1[2],"<br>";
+        echo $Ligne2[0],"&ensp;|&ensp;",$Ligne2[1],"&ensp;|&ensp;",$Ligne2[2],"<br>";
+        echo $Ligne3[0],"&ensp;|&ensp;",$Ligne3[1],"&ensp;|&ensp;",$Ligne3[2],"<br>";
+        Victoire($Ligne1,$Ligne2,$Ligne3);
+        echo "<br>";
+    }
 
-$ligne1=array('O','X','O');
-$ligne2=array('X','O','X');
-$ligne3=array(bouton(),'X','O');
 
+    function Victoire($Ligne1,$Ligne2,$Ligne3){
+        //logique de victoire
+        if($Ligne1[0]===$Ligne1[1] and $Ligne1[1]===$Ligne1[2]){
+            echo "<br>victoire de ",$Ligne1[0],"<br>";
+        }
+        elseif($Ligne2[0]===$Ligne2[1] and $Ligne2[1]===$Ligne2[2]){
+            echo "<br>victoire de ",$Ligne2[0],"<br>";
+        }
+        elseif($Ligne3[0]===$Ligne3[1] and $Ligne3[1]===$Ligne3[2]){
+            echo "<br>victoire de ",$Ligne3[0],"<br>";
+        }
+        elseif($Ligne1[0]===$Ligne2[1] and $Ligne2[1]===$Ligne3[2]){
+            echo "<br>victoire de ",$Ligne1[0],"<br>";
+        }
+        elseif($Ligne3[0]===$Ligne2[1] and $Ligne2[1]===$Ligne1[2]){
+            echo "<br>victoire de ",$Ligne1[0],"<br>";
+        }
+    }
 
+    function bouton(){
+        ?>
+            <form action="" method=""get> 
+            <input type = 'submit' name='case' value = '-'>
+            </form>
+        <?php
 
-function bouton(){
-    ?>
-    <form action="" method="post"> 
-        <input type = 'submit' name='placer' value = '-'>
-        
-    </form>
-    <?php
-}
+    }
+    //je vais faire des cauchemars de ces boutons
+    $Ligne1=array('X','X','X');
+    $Ligne2=array('X','O','O');
+    $Ligne3=array('O','X',bouton());
+
+    affichage($Ligne1,$Ligne2,$Ligne3);
+    
 
 
 
 ?>
-
-
-<body>
-
-<section id="entier">
-    <div class=case>
-    &ensp; <?php echo $ligne1[0] ?> &ensp;
-    </div>
-    &ensp;&ensp;
-    <div class=case>
-    &ensp; <?php  echo$ligne1[1] ?> &ensp;
-    </div>
-    &ensp;&ensp;
-    <div class=case>
-    &ensp; <?php  echo $ligne1[2] ?> &ensp;
-    </div>
-</section>
-
-<br>
-
-<section id="entier">
-    <div class=case>
-    &ensp; <?php echo $ligne2[0] ?> &ensp;
-    </div>
-    &ensp;&ensp;
-    <div class=case>
-    &ensp; <?php  echo$ligne2[1] ?> &ensp;
-    </div>
-    &ensp;&ensp;
-    <div class=case>
-    &ensp; <?php  echo $ligne2[2] ?> &ensp;
-    </div>
-</section>
-
-<br>
-
-<section id="entier">
-    <div class=case>
-    &ensp; <?php echo $ligne3[0] ?> &ensp;
-    </div>
-    &ensp;&ensp;
-    <div class=case>
-    &ensp; <?php  echo$ligne3[1] ?> &ensp;
-    </div>
-    &ensp;&ensp;
-    <div class=case>
-    &ensp; <?php  echo $ligne3[2] ?> &ensp;
-    </div>
-
-</section>
-
+    <form action="" method=""get> 
+    <input type = 'submit' name='reset' value = 'reset jeux'>
+    </form>
+<?php
