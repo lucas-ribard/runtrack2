@@ -12,9 +12,7 @@ $_SESSION['nbvisit'] += 1;
 //si reset remet a 1
 if (isset ($_GET['reset'])){
     $_SESSION['nbvisit']=1;
-
 }
-echo "il y a eu ";
-echo $_SESSION['nbvisit'];
-echo " visites";
+echo "il y a eu ",$_SESSION['nbvisit']," visites";
+
 ?>
