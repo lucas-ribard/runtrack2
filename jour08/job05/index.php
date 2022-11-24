@@ -160,7 +160,7 @@ echo $joueur,"<br>";
 
 //test bouton OK
 if ($_GET['caseL1I2']==="-"){
-   echo "testencore";
+   echo "test envoi";
    $Ligne1[2]="X";
    
 } 
