@@ -1,1 +1,1 @@
-SELECT * FROM `etudiants` WHERE LIKE '%T%'
+SELECT * FROM `etudiants` WHERE `prenom` LIKE '%T%'
