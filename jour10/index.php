@@ -8,14 +8,6 @@
      //$result_all = $request -> fetch_all();
      //var_dump($result_all);
 
-    // while(($result_array = $request -> fetch_array()) != null){
-    //     var_dump($result_array);
-    //     echo "<br>";
-    //     echo $result_array[1];
-
-    // }
-
-
 ?>
 
         <style>
